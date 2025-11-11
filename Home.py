@@ -49,7 +49,7 @@ Le fichier contient **2 onglets principaux :**
 
 data_overview = pd.DataFrame({
     "Catégorie": [
-        "✈️ Vols / Turnaround",
+        "✈️ Vols / Turnarounds",
         "🕓 Temps",
         "🧩 Tâches",
         "📑 Informations",
@@ -63,7 +63,7 @@ data_overview = pd.DataFrame({
         "task_updated_at, actual_start, actual_end"
     ],
     "Description": [
-        "Identifiants de turnaround (TRC)",
+        "Identifiants de turnaround",
         "Heures planifiées et réelles",
         "Liste des actions effectuées au sol",
         "Données ou remarques associées",
@@ -114,7 +114,7 @@ data_dict = pd.DataFrame({
         "Valeur de type date/heure saisie",
         "Valeur numérique saisie (quantité, durée, numéro tel, etc.)",
         "Code IATA de l’aéroport",
-        "Identifiant unique du cycle sol (rotation avion)",
+        "Identifiant unique du cycle sol",
         "Date et heure de la dernière mise à jour de la tâche"
     ]
 })
