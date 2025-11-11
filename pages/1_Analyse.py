@@ -3,7 +3,6 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 
-
 st.set_page_config(
     page_title="Tarmac Data Analysis",
     page_icon="✈️",
@@ -67,6 +66,8 @@ filtered_df = df[
     df["aircraft"].isin(aircrafts) &
     df["task_name"].isin(tasks)
 ]
+
+filtered_df2 = filtered_df
 
 if len(aircrafts) == 0:
     st.error("Ajoutez au moins un avion.")
@@ -270,8 +271,9 @@ else:
     # 📊 ANALYSE PAR DIMENSION
     # =============================
 
+
     st.markdown("---")
-    st.subheader("🏗️ Analyse par dimension")
+    st.subheader(" Analyse par dimension")
 
     # Sélecteur de dimension d'analyse
     dimension = st.selectbox(
@@ -289,7 +291,7 @@ else:
 
     # Calcul du taux de ponctualité moyen selon la dimension choisie
     df_dim = (
-        filtered_df.groupby(dim_col)["is_punctual"]
+        filtered_df2.groupby(dim_col)["is_punctual"]
         .mean()
         .reset_index()
         .sort_values("is_punctual", ascending=False)
@@ -318,9 +320,15 @@ else:
 
     st.plotly_chart(fig_dim, use_container_width=True)
 
+
+
     # Texte d’analyse dynamique
     st.write(f"Ce graphique présente la ponctualité moyenne par **{dimension.lower()}** selon les filtres appliqués.")
     st.write("Il permet d’identifier les segments présentant des retards fréquents et d’orienter les efforts d’amélioration en conséquence.")
+
+
+
+
 
     # =============================
     # TABLEAU DÉTAILLÉ
@@ -345,7 +353,7 @@ else:
         - du taux de ponctualité, qui donne une idée claire de la performance opérationnelle ;
         - des tâches les plus fréquentes ou les plus souvent en retard, afin de les prioriser pour une amélioration.
     """)
-    st.write("On constate à travers les différentes analyses que les taux de ponctualité restent globalement trop faibles, ce qui souligne l’intérêt de mettre en place des systèmes comme ceux proposés par Tarmac Technologies pour cibler les tâches à risque et a fortiori améliorer les processus.")
+    st.write("L'avantage avec Streamlit est que l'on peut afficher de plusieurs façons des données afin de mieux les analyser (c'est d'ailleurs ce que j'ai fait ici). On constate à travers les différentes analyses que les taux de ponctualité restent globalement trop faibles, ce qui souligne l’intérêt de mettre en place des systèmes comme ceux proposés par Tarmac Technologies pour cibler les tâches à risque et a fortiori améliorer les processus.")
     
 
 st.caption("Nathanaël Barrellon – Tarmac Technologies – Novembre 2025")
