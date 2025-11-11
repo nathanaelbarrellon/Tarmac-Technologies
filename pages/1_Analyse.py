@@ -32,7 +32,7 @@ st.markdown("Les principaux KPI que j'ai jugé intéressants sont :")
 # BARRE LATÉRALE
 # =============================
 
-st.sidebar.header("🔍 Filtres")
+st.sidebar.header("Filtres")
 
 airports = st.sidebar.multiselect(
     "Aéroport",
@@ -112,8 +112,8 @@ else:
 <li><b>Taux de ponctualité :</b> Pourcentage moyen des tâches réalisées dans les temps.</li>
 <li><b>Durée moyenne des tâches :</b> Temps moyen d’exécution, utile pour détecter les tâches longues ou inefficaces.</li>
 <li><b>Nombre de tâches :</b> Nombre total d’opérations enregistrées.</li>
-<li><b>Nombre de turnarounds distincts :</b> Nombre de turnaround uniques observées dans les données sélectionnées.</li>
-<li><b>Variabilité ponctualité :</b> dispersion des performances, permet de voir la stabilité ou l’hétérogénéité opérationnelle. Si cette dernière est élevée cela peut signifier qu'il y a certains sites, tâches qui posent problème.</li>
+<li><b>Nombre de turnarounds distincts :</b> Nombre de turnarounds uniques observés dans les données sélectionnées.</li>
+<li><b>Variabilité ponctualité :</b> Dispersion des performances, permet de voir la stabilité ou l’hétérogénéité opérationnelle. Si cette dernière est élevée cela peut signifier qu'il y a certains sites, tâches qui posent problème.</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
@@ -174,7 +174,7 @@ else:
         paper_bgcolor="rgba(0,0,0,0)",
         font=dict(color="#E0E0E0", size=13),
         xaxis_title="Date",
-        yaxis_title="Taux de ponctualité",
+        yaxis_title="Taux de ponctualité (%)",
         xaxis=dict(
             showgrid=False,
             tickmode="array",
@@ -265,7 +265,7 @@ else:
     - Une valeur **positive** → les tâches durent plus longtemps que prévu (retard).
     - Une valeur **négative** → elles sont plus rapides que prévu (avance).
     """)
-    st.write("Certaines tâches, bien que sélectionnées dans le filtre, ne sont pas présents car dans l'excel des valeurs sont manquantes dans les colonnes planifiées et réelles. Ce graphique reste tout de même intéressant pour trouver les tâches les plus en retard afin de se focaliser dessus. ")
+    st.write("Certaines tâches, bien que sélectionnées dans le filtre, ne sont pas présentes puisque dans l'excel des valeurs sont manquantes au niveau des colonnes planifiées et réelles. Ce graphique reste tout de même intéressant pour trouver les tâches les plus en retard afin de se focaliser dessus. ")
 
     # =============================
     # 📊 ANALYSE PAR DIMENSION
@@ -314,7 +314,7 @@ else:
         font=dict(color="#E0E0E0", size=13),
         yaxis=dict(tickformat=".0%"),
         xaxis_title=dimension,
-        yaxis_title="Taux de ponctualité",
+        yaxis_title="Taux de ponctualité (%)",
         title_font=dict(size=18, color="#E0E0E0"),
     )
 
@@ -353,7 +353,7 @@ else:
         - du taux de ponctualité, qui donne une idée claire de la performance opérationnelle ;
         - des tâches les plus fréquentes ou les plus souvent en retard, afin de les prioriser pour une amélioration.
     """)
-    st.write("L'avantage avec Streamlit est que l'on peut afficher de plusieurs façons des données afin de mieux les analyser (c'est d'ailleurs ce que j'ai fait ici). On constate à travers les différentes analyses que les taux de ponctualité restent globalement trop faibles, ce qui souligne l’intérêt de mettre en place des systèmes comme ceux proposés par Tarmac Technologies pour cibler les tâches à risque et a fortiori améliorer les processus.")
+    st.write("L'avantage avec Streamlit est que l'on peut afficher de plusieurs façons des données afin de mieux les analyser (c'est d'ailleurs ce que j'ai fait ici). On constate à travers les différentes analyses que les taux de ponctualité restent globalement trop faibles, ce qui souligne l’intérêt de mettre en place des systèmes comme ceux proposés par Tarmac Technologies pour cibler les tâches à risque et _a fortiori_ améliorer les processus.")
     
 
 st.caption("Nathanaël Barrellon – Tarmac Technologies – Novembre 2025")

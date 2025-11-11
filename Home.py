@@ -80,7 +80,7 @@ st.dataframe(
 
 st.write("")
 st.write("")
-st.write("Avant d’analyser les données, j'ai jugé important de chercher à comprendre la signification de chaque colonne (en recherchant ou en déduisant avec les valeurs). Le tableau ci-dessous en présente une synthèse, dans l’ordre d’apparition dans le fichier Excel fourni :")
+st.write("Avant d’analyser les données, j'ai jugé important de chercher à comprendre la signification de chaque colonne (en la recherchant ou en la déduisant des valeurs). Le tableau ci-dessous en présente une synthèse, dans l’ordre d’apparition dans le fichier Excel fourni :")
 
 data_dict = pd.DataFrame({
     "Colonne": [
@@ -143,7 +143,7 @@ L’ensemble est entièrement **interactif et filtrable** par :
 - Type d’avion (`aircraft`)  
 - Type de tâche (`task_name`)
 
-Cela permet d'avoir un apercu personnalisable en fonction des besoins de l'utilisateur du dashboard.
+Cela permet d'avoir un aperçu personnalisable en fonction des besoins de l'utilisateur du dashboard.
 """)
 
 st.info("""
