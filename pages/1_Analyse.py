@@ -194,7 +194,7 @@ else:
 
     st.plotly_chart(fig_time, use_container_width=True)
 
-    st.write("Ce graphique permet de suivre la ponctualité pour les différents aéroports et les différentes tâches choisies dans les filtres. Il offre une vision temporelle utile pour vérifier si un processus d’amélioration d’une tâche est (ou non) une réussite. On peut remarquer, en jouant avec les données sélerionnées, que dans l'ensemble il y a une hausse de la ponctualité au cours du temps (ce qui peut téloigner d'une volonté d'améliorer les process des tâches). ")
+    st.write("Ce graphique permet de suivre la ponctualité pour les différents aéroports et les différentes tâches choisies dans les filtres. Il offre une vision temporelle utile pour vérifier si un processus d’amélioration d’une tâche est (ou non) une réussite. On peut remarquer, en jouant avec les données sélectionnées, que dans l'ensemble il y a une hausse de la ponctualité au cours du temps (ce qui peut témoigner d'une volonté d'améliorer les process des tâches). ")
 
     st.markdown("<hr style='border:1px solid #333; margin:20px 0;'>", unsafe_allow_html=True)
 
@@ -265,7 +265,7 @@ else:
     - Une valeur **positive** → les tâches durent plus longtemps que prévu (retard).
     - Une valeur **négative** → elles sont plus rapides que prévu (avance).
     """)
-    st.write("Certaines tâches, bien que sélectionnées dans le filtre, ne sont pas présenets car dans l'excel des valeurs sont manquantes dans les colonnes planifiées et réelles. Ce graphique reste tout de même intéressant pour trouver les tâches les plus en retard afin de se focaliser dessus. ")
+    st.write("Certaines tâches, bien que sélectionnées dans le filtre, ne sont pas présents car dans l'excel des valeurs sont manquantes dans les colonnes planifiées et réelles. Ce graphique reste tout de même intéressant pour trouver les tâches les plus en retard afin de se focaliser dessus. ")
 
     # =============================
     # 📊 ANALYSE PAR DIMENSION
@@ -273,7 +273,7 @@ else:
 
 
     st.markdown("---")
-    st.subheader(" Analyse par dimension")
+    st.subheader("🏗️ Analyse par dimension")
 
     # Sélecteur de dimension d'analyse
     dimension = st.selectbox(
