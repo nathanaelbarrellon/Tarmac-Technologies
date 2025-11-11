@@ -105,7 +105,7 @@ else:
 
 
 
-    st.write("Tous les KPI ci-dessus sont sont calculés à partir de toutes les tâches sélectionnées dans les filtres")
+    st.write("Tous les KPI ci-dessus sont calculés à partir de toutes les tâches sélectionnées dans les filtres")
     st.markdown("""
 <div style='font-size:14px; color:#ccc; line-height:1.6'>
 <ul>
